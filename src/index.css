@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+/* LED RUN */
+.animationLEDRUN {
+    display: table-cell;
+    animation: ledRun 1.5s linear infinite;
+}
+
+.container-ledRun span:nth-child(1) {
+    animation-delay: 0.25s;
+}
+
+.container-ledRun span:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.container-ledRun span:nth-child(3) {
+    animation-delay: 0.75s;
+}
+
+.container-ledRun span:nth-child(4) {
+    animation-delay: 1s;
+}
+
+.container-ledRun span:nth-child(5) {
+    animation-delay: 1.25s;
+}
+
+.container-ledRun span:nth-child(6) {
+    animation-delay: 1.5s;
+}
+
+
+@keyframes ledRun {
+
+    0%,
+    100% {
+        color: rgb(209, 190, 190);
+        filter: blur(2px);
+        text-shadow: 0 0 10px hsl(198, 100%, 50%),
+            0 0 20px hsl(198, 100%, 50%),
+            0 0 40px hsl(198, 100%, 50%),
+            0 0 80px hsl(198, 100%, 50%),
+            0 0 120px hsl(198, 100%, 50%),
+            0 0 200px hsl(198, 100%, 50%),
+            0 0 300px hsl(198, 100%, 50%),
+            0 0 400px hsl(198, 100%, 50%);
+    }
+
+    5%,
+    95% {
+        color: white;
+        filter: blur(0px);
+        text-shadow: none;
+    }
+}
+
+
+/* WATER */
+.waterAnimation {
+    animation: waterAnimation 5s ease-in-out infinite;
+    color: #03a9f4;
+}
+
+
+
+@keyframes waterAnimation {
+
+    0%,
+    100% {
+        clip-path: polygon(0% 99%, 0% 56%, 16% 45%, 29% 55%, 49% 43%, 60% 58%, 80% 42%, 88% 56%, 100% 43%, 100% 100%);
+    }
+
+    50% {
+        clip-path: polygon(0% 99%, 0 42%, 14% 56%, 30% 40%, 45% 56%, 59% 40%, 78% 56%, 86% 40%, 100% 58%, 100% 100%);
+    }
+}
