@@ -7,6 +7,7 @@ import Contact from './pages/Contact'
 import Experience from './pages/Experience'
 import MySkills from './pages/MySkills'
 
+
 function AnimatedPages() {
     const location = useLocation()
     return (

@@ -1,5 +1,4 @@
 import AnimatedPages from './AnimatedPages'
-import './App.css'
 import Background from './components/Background'
 import Navbar from './components/Navbar'
 
